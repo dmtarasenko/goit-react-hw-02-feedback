@@ -1,4 +1,5 @@
 import { Component } from 'react';
+import PropTypes from 'prop-types';
 import { Button } from 'components/FeedbackOptions/FeedbackOptions.styled';
 
 export class FeedbackOptions extends Component {
@@ -16,3 +17,8 @@ export class FeedbackOptions extends Component {
     );
   }
 }
+
+FeedbackOptions.propTypes = {
+  onLeaveFeedback: PropTypes.func,
+  options: PropTypes.arrayOf(PropTypes.string),
+};
